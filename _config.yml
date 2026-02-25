@@ -89,8 +89,8 @@ bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 # Blog
 # -----------------------------------------------------------------------------
 
-blog_name: My Thoughts  # blog_name will be displayed in your blog page
-blog_description: and experiences.
+blog_name: Personal Blogs  # blog_name will be displayed in your blog page
+blog_description: 个人博客
 permalink: /blog/:year/:title/
 lsi: false # produce an index for related posts
 
@@ -260,7 +260,7 @@ jekyll-archives:
   books:
     enabled: [year, tags, categories] # enables year, tag and category archives (remove if you need to disable one of them).
 
-display_tags: ["Youtube Videos", "Thoughts","Chinese", "English", "Distributed System", "Parallel Programming", "Computer Graphics", "AI", "Competitive Programming", "Novels"] # these tags will be displayed on the front page of your blog
+display_tags: ["video", "thoughts","chinese", "english", "distributed-system", "parallel-programming", "computer-graphics", "ai", "competitive-programming", "novels"] # these tags will be displayed on the front page of your blog
 display_categories: [] # these categories will be displayed on the front page of your blog
 
 # -----------------------------------------------------------------------------
