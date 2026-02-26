@@ -30,7 +30,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-关于nba球星cade-cunningham",
+        },{id: "post-thinking-about-thinking",
+        
+          title: "Thinking about thinking",
+        
+        description: "some thoughts about thinking",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/3/";
+          
+        },
+      },{id: "post-关于nba球星cade-cunningham",
         
           title: "关于nba球星cade cunningham",
         
