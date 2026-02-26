@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='https://github.com/eR3R3'>Github</a>. <a href='https://x.com/ta78874238'>X</a>. <a href='https://www.youtube.com/@eR3R3'>Youtube</a>. <a href='https://www.linkedin.com/in/yuwen-tao-a0606b365/'>LinkedIn</a>. <a href='https://space.bilibili.com/650898281'>Bilibili</a>. 
+subtitle: <a href='https://github.com/eR3R3'>Github</a>. <a href='https://x.com/ta78874238'>X</a>. <a href='https://www.youtube.com/@eR3R3'>Youtube</a>. <a href='https://www.linkedin.com/in/yuwen-tao-a0606b365/'>LinkedIn</a>. <a href='https://space.bilibili.com/650898281'>Bilibili</a>. 抖音搜eR1R1. 
 
 profile:
   align: right
