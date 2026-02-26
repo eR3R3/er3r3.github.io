@@ -30,7 +30,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-my-first-blog",
+        },{id: "post-关于nba球星cade-cunningham",
+        
+          title: "关于nba球星cade cunningham",
+        
+        description: "我的想法",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/2/";
+          
+        },
+      },{id: "post-my-first-blog",
         
           title: "My First Blog!",
         
