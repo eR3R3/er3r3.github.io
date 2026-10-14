@@ -12,7 +12,7 @@ category: computer-science
   - ***CVPR 2026***, Poster session (Saturday June 6, 2026, 11:45 AM – 1:45 PM MDT, Vancouver)
 - **Role:** Sole first author
 - **Co-authors:** Kanglei Zhou (Tsinghua), Chang Li, Liyuan Wang
-- **Links:** [CVPR virtual site (poster 38204)](https://cvpr.thecvf.com/virtual/2026/poster/38204) · [Paper walkthrough (YouTube)](https://www.youtube.com/watch?v=jtZWzR-rODs) · [Paper PDF]({{ 'assets/pdf/CVPR_26___8490___GeoCGA.pdf' | relative_url }})
+- **Links:** [CVPR virtual site (poster 38204)](https://cvpr.thecvf.com/virtual/2026/poster/38204) · [Paper walkthrough (YouTube)](https://www.youtube.com/watch?v=jtZWzR-rODs) · [Poster PDF]({{ 'assets/pdf/CVPR_26___8490___GeoCGA.pdf' | relative_url }})
 
 ### CVPR 2026 paper preview
 

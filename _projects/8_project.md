@@ -3,7 +3,7 @@ layout: page
 title: ShuMath
 description: Online math and programming platform for international students (~100 users). 30+ AMC/AIME tutorial videos on YouTube and Bilibili.
 img: assets/img/projects/shumath_logo.png
-importance: 3
+importance: 1
 category: math
 ---
 
