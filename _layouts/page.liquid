@@ -25,6 +25,14 @@ layout: default
     </div>
   {% endif %}
 
+  {% if page.after_references_image %}
+    <div class="row mt-3">
+      <div class="col-12">
+        {% include figure.liquid path=page.after_references_image title=page.after_references_caption class="img-fluid rounded z-depth-1" zoomable=true %}
+      </div>
+    </div>
+  {% endif %}
+
   {% if site.giscus and page.giscus_comments %}
     {% include giscus.liquid %}
   {% endif %}

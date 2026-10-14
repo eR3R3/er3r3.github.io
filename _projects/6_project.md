@@ -1,80 +1,58 @@
 ---
 layout: page
-title: project 6
-description: a project with no image
-img:
-importance: 4
-category: fun
+title: Panopticon
+description: "<em>Watching or Being Watched? (监视，还是被监视?)</em> — interactive VR installation on surveillance, built around Foucault's reading of Bentham's Panopticon. CS × Visual Arts joint exhibition at Pinghe."
+img: assets/img/projects/panopticon_exhibition_poster.jpg
+importance: 1
+category: art
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+- **Full title:** *Watching or Being Watched? (监视，还是被监视?)*
+- **Collaborators:** 徐一诺 Eva, 何其乐 Simona, 陶誉文 Lucas
+- **Platform:** Unity + OpenXR + C#; 3D modeling in Blender / Substance
+- **Hardware:** VR headset + external projectors
+- **Format:** Interdisciplinary CS × Visual Arts joint exhibition at Pinghe
+- **Video:** [documentation on YouTube](https://www.youtube.com/watch?v=uQy19Bez1RM)
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+### Exhibition poster
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+{% include figure.liquid path="assets/img/projects/panopticon_exhibition_poster.jpg" title="Watching or Being Watched? — exhibition poster. Presented by Eva, Simona, and Lucas." class="img-fluid rounded z-depth-1" zoomable=true %}
 
-<div class="row">
+### Documentation
+
+<div style="aspect-ratio: 16/9; width: 100%; margin: 1.5rem 0;">
+  <iframe src="https://www.youtube.com/embed/uQy19Bez1RM" title="Watching or Being Watched? — documentation" style="width: 100%; height: 100%; border: 0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+### The concept
+
+Foucault reads Bentham's Panopticon not just as a prison design but as a model of surveillance and social control: the subject *internalizes* the possibility of being watched. One participant becomes the primary subject by wearing the VR headset, while surrounding viewers observe that participant as part of a larger system of surveillance — enacting the endless cycle of monitoring that the piece is about.
+
+<div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid path="assets/img/projects/panopticon_1.png" title="Installation view 1" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid path="assets/img/projects/panopticon_2.png" title="Installation view 2" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid path="assets/img/projects/panopticon_3.png" title="Installation view 3" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid path="assets/img/projects/panopticon_4.png" title="Installation view 4" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
-</div>
 
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
+### The installation
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
+An interactive VR installation where the viewer's own perspective reshapes the scene — the act of looking changes what is there to be looked at. We built physical structures to complete the space around the headset and used projection to extend the experience beyond the VR view, so the person outside the headset is also part of the piece.
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
+### My side of the collaboration
 
-{% raw %}
+I designed and developed the technical system — **Unity, OpenXR, C#**, 3D modeling in **Blender** and texturing in **Substance** (VR environment + eye models), VR hardware integration, and projection — around the structures and visual language Eva and Simona had developed. Working this way reminded me that technical choices are an aesthetic choice: what the system *can't* render shapes what the piece *means*.
 
-```html
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
-```
+### Significance
 
-{% endraw %}
+It is the clearest example of what I like about putting a serious idea in an unexpected medium. A philosophical reading of surveillance becomes a thing the viewer physically participates in, and the viewer's participation is itself the subject of the piece.

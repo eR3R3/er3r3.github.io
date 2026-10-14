@@ -1,80 +1,41 @@
 ---
 layout: page
-title: project 5
-description: a project with a background image
-img: assets/img/1.jpg
-importance: 3
-category: fun
+title: Silent Speak
+description: Portable lip-language-to-text system — a vision module + AR glasses that displays the converted text on the lens. For tracheostomy patients and high-noise industrial workers. Silver Prize at AdventureX 2025 (Even Reality Track).
+img: assets/img/projects/silentspeak_product.png
+importance: 4
+category: computer-science
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+- **Venue:** AdventureX 2025 (Hangzhou), Even Reality Track
+- **Award:** Silver Prize
+- **Collaborators:** 3 co-leaders from PHCS
+- **Project page:** [AdventureX gallery](https://gallery.adventure-x.cn/projects/2500d2b4-87f2-43a3-89fa-a14aa05e9ea9)
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+### Product
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+{% include figure.liquid path="assets/img/projects/silentspeak_product.png" title="Silent Speak — product definition: Lip Link Cam + Even G1 AR glasses." class="img-fluid rounded z-depth-1" zoomable=true %}
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
-</div>
+Silent Speak is a **portable lip-language-to-text conversion solution** made of two parts:
 
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
+- **Lip Link Cam** — a vision hardware module with onboard computing. It captures lip movement and runs the lip-reading pipeline.
+- **Even G1** — commercial AR glasses (made by Even Realities, our track sponsor). Converted text appears **directly on the lens**, in-view, no second screen required.
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
+### Target users
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
+- **Tracheostomy patients** who have lost normal voicing but retain mouth movement — they get a wearable interface for speaking that doesn't require typing on a phone.
+- **Industrial workers** in environments too loud for speech recognition to work — the lip signal is independent of the audio noise floor.
 
-{% raw %}
+### System overview
 
-```html
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
-```
+A **fine-tuned Vision Transformer** backbone does the lip-reading. The Lip Link Cam captures frames and performs on-device inference; results stream to the Even G1 over Bluetooth and are rendered as text on the lens. The whole pipeline runs quietly enough to be a continuous wearable rather than a one-shot tool.
 
-{% endraw %}
+### My contributions
+
+- Led **Bluetooth communication development** between the Lip Link Cam and the Even G1 glasses.
+- Led **AI model fine-tuning** of the Vision Transformer lip-reading backbone.
+- Co-led system integration across the camera module, the glasses, and the host.
+
+### Motivation
+
+Lip-reading is a problem where the input signal is deliberately uncoupled from audio, which makes it a clean place to practice end-to-end multimodal perception. It also had the quality I look for in a project: a specific person who would actually use the result.

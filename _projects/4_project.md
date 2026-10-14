@@ -1,80 +1,75 @@
 ---
 layout: page
-title: project 4
-description: another without an image
-img:
+title: IronPulse Scouting
+description: Web-based scouting & analytics platform for FRC 6941 IronPulse Robotics. TypeScript / NestJS / Next.js / PostgreSQL. Used by our drive team to argue strategy from data.
+img: assets/img/projects/ironpulse_2_home.png
 importance: 3
-category: fun
+category: computer-science
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+- **Role:** Programming Leader (sole lead over 20+ programmers)
+- **Season:** REEFSCAPE 2025 — team qualified for the **FIRST Championship in Houston**
+- **Stack:** TypeScript · NestJS · Next.js · PostgreSQL
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+### Overview
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+A web-based scouting platform that captures match data and surfaces analytics for strategic decisions. Scouts enter per-match and pit observations through a mobile-first UI; the dashboard aggregates performance across teams so our strategy meetings can argue from data rather than impressions.
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
-</div>
+#### Authentication & home
 
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
-
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
-
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
-
-{% raw %}
-
-```html
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+<div class="row mt-3">
+  <div class="col-md-6 mt-3 mt-md-0">
+    {% include figure.liquid path="assets/img/projects/ironpulse_1_signin.png" title="Sign-in page" class="img-fluid rounded z-depth-1" zoomable=true %}
+    <div class="caption">Sign-in — team-scoped auth.</div>
   </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+  <div class="col-md-6 mt-3 mt-md-0">
+    {% include figure.liquid path="assets/img/projects/ironpulse_2_home.png" title="Home" class="img-fluid rounded z-depth-1" zoomable=true %}
+    <div class="caption">Home — entry point to match / pit scouting and analytics.</div>
   </div>
 </div>
-```
 
-{% endraw %}
+#### Scouting entry
+
+<div class="row mt-3">
+  <div class="col-md-6 mt-3 mt-md-0">
+    {% include figure.liquid path="assets/img/projects/ironpulse_3_pitscouting.png" title="Pit scouting form" class="img-fluid rounded z-depth-1" zoomable=true %}
+    <div class="caption">Pit scouting — mobile-first form filled before matches.</div>
+  </div>
+  <div class="col-md-6 mt-3 mt-md-0">
+    {% include figure.liquid path="assets/img/projects/ironpulse_5_match_record.png" title="Match record" class="img-fluid rounded z-depth-1" zoomable=true %}
+    <div class="caption">Match record — per-match scouting entries.</div>
+  </div>
+</div>
+
+#### Analytics dashboard
+
+<div class="row mt-3">
+  <div class="col-md-6 mt-3 mt-md-0">
+    {% include figure.liquid path="assets/img/projects/ironpulse_4_team_comparison.png" title="Team performance comparison" class="img-fluid rounded z-depth-1" zoomable=true %}
+    <div class="caption">Team performance comparison — strategy meeting view.</div>
+  </div>
+  <div class="col-md-6 mt-3 mt-md-0">
+    {% include figure.liquid path="assets/img/projects/ironpulse_6_match_stats.png" title="Match statistics" class="img-fluid rounded z-depth-1" zoomable=true %}
+    <div class="caption">Match statistics — aggregated performance metrics.</div>
+  </div>
+</div>
+<div class="row mt-3">
+  <div class="col-md-6 mt-3 mt-md-0">
+    {% include figure.liquid path="assets/img/projects/ironpulse_7_match_details.png" title="Match details" class="img-fluid rounded z-depth-1" zoomable=true %}
+    <div class="caption">Match details — drill into a single match.</div>
+  </div>
+  <div class="col-md-6 mt-3 mt-md-0">
+    {% include figure.liquid path="assets/img/projects/ironpulse_8_match_view_stats.png" title="Match detail — stats view" class="img-fluid rounded z-depth-1" zoomable=true %}
+    <div class="caption">Match detail — stats view.</div>
+  </div>
+</div>
+<div class="row mt-3">
+  <div class="col-md-6 mt-3 mt-md-0">
+    {% include figure.liquid path="assets/img/projects/ironpulse_9_pit_viewer.png" title="Pit scout viewer" class="img-fluid rounded z-depth-1" zoomable=true %}
+    <div class="caption">Pit-scout viewer — browse pre-match team notes.</div>
+  </div>
+</div>
+
+### Team impact
+
+A scouting pipeline that converts the chaos of a competition day into something a strategy meeting can actually reason over. Instead of relying on who-remembers-what, our drive team walks into alliance selection with ranked candidates, drill-down match detail, and side-by-side team comparisons.

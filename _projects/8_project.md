@@ -1,81 +1,98 @@
 ---
 layout: page
-title: project 8
-description: an other project with a background image and giscus comments
-img: assets/img/9.jpg
-importance: 2
-category: work
-giscus_comments: true
+title: ShuMath
+description: Online math and programming platform for international students (~100 users). 30+ AMC/AIME tutorial videos on YouTube and Bilibili.
+img: assets/img/projects/shumath_logo.png
+importance: 3
+category: math
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+- **Platform:** [shumath.com](https://shumath.com/)
+- **Role:** Co-founder, math and programming tutor
+- **Reach:** ~100 international students on ShuMath; 30+ videos across YouTube, Bilibili, and the AoPS community
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+### ShuMath
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+An online platform for math and programming lessons aimed at international middle- and high-school students. We built it because the gap between "doing well at a specific contest" and "actually understanding the technique" is wider than contest culture tends to admit — and a lot of students in that gap don't have local resources to close it. Visit at [shumath.com](https://shumath.com/).
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
+<div style="aspect-ratio: 16/9; width: 100%; margin: 1.5rem 0;">
+  <iframe src="https://www.youtube.com/embed/Q-1Hq0zQ4Xg" title="ShuMath intro" style="width: 100%; height: 100%; border: 0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
+### AMC/AIME & topic videos
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+30+ instructional videos walking through 40+ competition problems — explaining not just the solution but the way the problem signals which technique to reach for. Published on **YouTube** ([@eR3R3](https://www.youtube.com/@eR3R3)) and **Bilibili** ([space.bilibili.com/650898281](https://space.bilibili.com/650898281)). A selection below.
+
+#### AMC walkthroughs
+
+<div class="row mt-3">
+    <div class="col-md-6 mt-3 mt-md-0">
+      <div style="aspect-ratio: 16/9; width: 100%;">
+        <iframe src="https://www.youtube.com/embed/E3sGIWU18yc" title="2023 AMC 10B Problem 15" style="width: 100%; height: 100%; border: 0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="caption">2023 AMC 10B — Problem 15</div>
     </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+    <div class="col-md-6 mt-3 mt-md-0">
+      <div style="aspect-ratio: 16/9; width: 100%;">
+        <iframe src="https://www.youtube.com/embed/qZRQxiPIRhI" title="2023 AMC 12B Problem 19" style="width: 100%; height: 100%; border: 0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="caption">2023 AMC 12B — Problem 19</div>
     </div>
 </div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
+<div class="row mt-3">
+    <div class="col-md-6 mt-3 mt-md-0">
+      <div style="aspect-ratio: 16/9; width: 100%;">
+        <iframe src="https://www.youtube.com/embed/kXLHjclTD44" title="2023 AMC 10B Problem 11" style="width: 100%; height: 100%; border: 0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="caption">2023 AMC 10B — Problem 11</div>
+    </div>
+    <div class="col-md-6 mt-3 mt-md-0">
+      <div style="aspect-ratio: 16/9; width: 100%;">
+        <iframe src="https://www.youtube.com/embed/egQK11g54mA" title="2022 AMC 10A Problem 14" style="width: 100%; height: 100%; border: 0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="caption">2022 AMC 10A — Problem 14</div>
+    </div>
+</div>
+<div class="row mt-3">
+    <div class="col-md-6 mt-3 mt-md-0">
+      <div style="aspect-ratio: 16/9; width: 100%;">
+        <iframe src="https://www.youtube.com/embed/R1CtcZ2pWVk" title="2022 AMC 10A Problem 13" style="width: 100%; height: 100%; border: 0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="caption">2022 AMC 10A — Problem 13</div>
+    </div>
 </div>
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
+#### Topic videos
 
-{% raw %}
-
-```html
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
+<div class="row mt-3">
+    <div class="col-md-6 mt-3 mt-md-0">
+      <div style="aspect-ratio: 16/9; width: 100%;">
+        <iframe src="https://www.youtube.com/embed/x4ZhqaJhxeA" title="Number theory" style="width: 100%; height: 100%; border: 0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="caption">Number theory</div>
+    </div>
+    <div class="col-md-6 mt-3 mt-md-0">
+      <div style="aspect-ratio: 16/9; width: 100%;">
+        <iframe src="https://www.youtube.com/embed/oDUHD8DOXHM" title="Number theory II" style="width: 100%; height: 100%; border: 0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="caption">Number theory II</div>
+    </div>
 </div>
-```
+<div class="row mt-3">
+    <div class="col-md-6 mt-3 mt-md-0">
+      <div style="aspect-ratio: 16/9; width: 100%;">
+        <iframe src="https://www.youtube.com/embed/Q6ovwWzJ7EE" title="Geometry" style="width: 100%; height: 100%; border: 0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="caption">Geometry</div>
+    </div>
+    <div class="col-md-6 mt-3 mt-md-0">
+      <div style="aspect-ratio: 16/9; width: 100%;">
+        <iframe src="https://www.youtube.com/embed/NoL-Ys7RQB0" title="Geometry tricks" style="width: 100%; height: 100%; border: 0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="caption">Geometry tricks</div>
+    </div>
+</div>
 
-{% endraw %}
+### Takeaways from teaching
+
+Explaining a proof out loud is the fastest way to find out whether I actually understand it. When I think I know a step but can't explain why that step comes *next*, the gap is real. Making these videos has been one of the clearest tools I have for checking my own thinking.

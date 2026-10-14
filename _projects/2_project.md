@@ -1,81 +1,63 @@
 ---
 layout: page
-title: project 2
-description: a project with a background image and giscus comments
-img: assets/img/3.jpg
+title: GeoCGA
+description: Geometry-aware cross-modal graph alignment for referring segmentation in 3D Gaussian Splatting. CVPR 2026 Poster · sole first author.
+img: assets/img/projects/geocga_paper.png
 importance: 2
-category: work
-giscus_comments: true
+category: computer-science
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+- **Full title:** *Geometry-Aware Cross-Modal Graph Alignment for Referring Segmentation in 3D Gaussian Splatting*
+- **Highlights:**
+  - ***CVPR 2026***, Poster session (Saturday June 6, 2026, 11:45 AM – 1:45 PM MDT, Vancouver)
+- **Role:** Sole first author
+- **Co-authors:** Kanglei Zhou (Tsinghua), Chang Li, Liyuan Wang
+- **Links:** [CVPR virtual site (poster 38204)](https://cvpr.thecvf.com/virtual/2026/poster/38204) · [Paper walkthrough (YouTube)](https://www.youtube.com/watch?v=jtZWzR-rODs) · [Paper PDF]({{ 'assets/pdf/CVPR_26___8490___GeoCGA.pdf' | relative_url }})
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+### CVPR 2026 paper preview
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+The full 4800×2411 CVPR 2026 poster-paper covering motivation, method, and results. Click to zoom in, or [open the PDF]({{ 'assets/pdf/CVPR_26___8490___GeoCGA.pdf' | relative_url }}) for the vector version.
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
+{% include figure.liquid path="assets/img/projects/geocga_paper.png" title="GeoCGA: CVPR 2026 poster-paper (4800×2411)." class="img-fluid rounded z-depth-1" zoomable=true %}
+
+<div style="aspect-ratio: 16/9; width: 100%; margin: 1.5rem 0;">
+  <iframe src="https://www.youtube.com/embed/jtZWzR-rODs" title="GeoCGA paper walkthrough" style="width: 100%; height: 100%; border: 0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
+### The task (R3DGS)
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
+- **Referring 3D Gaussian Splatting Segmentation** requires generating a 2D mask for a specific object given a natural-language description.
+- Queries typically rely on **spatial relationships** rather than appearance (e.g. *"the bottle between the apple and the banana"*).
+- The core challenge: resolving references when multiple objects share appearance but differ in position.
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
+### Limitations of the prior SOTA
 
-{% raw %}
+- Existing methods rely primarily on **appearance-based cross-modal matching**.
+- Visually indistinguishable objects (e.g. identical bottles) collapse under appearance alone.
+- Spatial relations in the text query are not grounded in the underlying 3D geometry.
 
-```html
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
-```
+### GeoCGA contributions
 
-{% endraw %}
+- **GeoCGA** (Geometry-Aware Cross-Modal Graph Alignment): a dual-graph framework for referring segmentation on 3D Gaussian Splatting scenes.
+- **Scene graph.** Constructs an **object-level geometric graph** directly from the 3DGS field: nodes are object instances, edges encode spatial relations.
+- **Text graph.** Parses the query into a **semantic–spatial graph** mirroring the structure of the scene graph.
+- **Cross-modal alignment.** Matches the two graphs across modalities, grounding the referring expression in 3D geometry rather than appearance.
+
+### Results
+
+- mIoU gains over prior SOTA on three standard benchmarks:
+  - **+28.8%** on Ref-LERF
+  - **+2.6%** on LERF-OVS
+  - **+3.1%** on 3D-OVS
+
+### Significance
+
+- A concrete step toward **physical AI**: aligning what a system sees in 3D with what a person actually means.
+- The same alignment signal is directly usable by downstream **robot grasping and manipulation** pipelines.
+
+### My contributions
+
+- Designed both the geometric graph construction and the cross-modal alignment modules.
+- Implemented the full training and evaluation pipeline across the three benchmarks.
+- Authored the initial manuscript.
+- Iterated on method and framing through weekly discussions with Dr. Zhou and co-authors.
