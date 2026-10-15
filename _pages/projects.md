@@ -81,6 +81,29 @@ _styles: >
     font-weight: 300;
     letter-spacing: -0.01em;
     margin: 2rem 0 1.25rem 0;
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 1.1rem;
+  }
+  .projects-page-title .category-nav {
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--global-text-color-light);
+    display: inline-flex;
+    gap: 0.9rem;
+  }
+  .projects-page-title .category-nav a {
+    color: var(--global-text-color-light);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: color 0.2s ease, border-color 0.2s ease;
+  }
+  .projects-page-title .category-nav a:hover {
+    color: var(--global-text-color);
+    border-bottom-color: var(--global-text-color);
   }
 ---
 
@@ -103,7 +126,14 @@ _styles: >
   </div>
 </div>
 
-<h1 class="projects-page-title">All Projects</h1>
+<h1 class="projects-page-title">
+  All Projects
+  <span class="category-nav">
+    <a href="#art">art</a>
+    <a href="#computer-science">cs</a>
+    <a href="#math">maths</a>
+  </span>
+</h1>
 
 <!-- pages/projects.md -->
 <div class="projects">
